@@ -79,28 +79,25 @@ export const lessons: LessonContent[] = [
       {
         title: "Basic HTML Document",
         code: `<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
+    <title>My First Page</title>
 </head>
 <body>
-    <h1>Welcome to HTML!</h1>
-    <p>This is my first HTML document.</p>
+    <h1>Hello World!</h1>
+    <p>This is my first webpage.</p>
 </body>
 </html>`,
-        explanation: "This is a complete HTML document with proper structure. The DOCTYPE declares HTML5, the head contains metadata, and the body contains visible content.",
+        explanation: "A simple HTML document with a title, heading, and paragraph.",
         executable: true
       },
       {
-        title: "HTML Elements Example",
-        code: `<h1>Main Heading</h1>
-<h2>Subheading</h2>
-<p>This is a paragraph with some <strong>bold text</strong> and <em>italic text</em>.</p>
-<br>
-<hr>`,
-        explanation: "Common HTML elements: headings (h1-h6), paragraphs (p), line breaks (br), horizontal rules (hr), and text formatting.",
+        title: "Basic HTML Elements",
+        code: `<h1>Big Heading</h1>
+<h2>Smaller Heading</h2>
+<p>This is a paragraph.</p>
+<p>This text is <strong>bold</strong> and this is <em>italic</em>.</p>`,
+        explanation: "Basic HTML elements for headings and text formatting.",
         executable: true
       }
     ],
@@ -177,33 +174,26 @@ export const lessons: LessonContent[] = [
     examples: [
       {
         title: "Heading Hierarchy",
-        code: `<h1>Main Article Title</h1>
+        code: `<h1>My Article</h1>
 <h2>Introduction</h2>
-<p>This is the introduction paragraph.</p>
+<p>This is the introduction.</p>
 
-<h2>Chapter 1: Getting Started</h2>
-<h3>Section 1.1: Basic Concepts</h3>
-<p>Content for section 1.1</p>
-
-<h3>Section 1.2: Advanced Topics</h3>
-<p>Content for section 1.2</p>
+<h2>Chapter 1</h2>
+<h3>Basic Concepts</h3>
+<p>Content for this section.</p>
 
 <h2>Conclusion</h2>
 <p>This is the conclusion.</p>`,
-        explanation: "Proper heading hierarchy creates a logical document structure that's good for SEO and screen readers.",
+        explanation: "Use headings in order (h1, h2, h3) to create a clear structure.",
         executable: true
       },
       {
         title: "Text Formatting",
-        code: `<p>This paragraph contains <strong>important text</strong> and <em>emphasized text</em>.</p>
-
-<p>You can <mark>highlight text</mark> and make text <small>smaller</small>.</p>
-
-<p>Mathematical formulas: E = mc<sup>2</sup></p>
-<p>Chemical formulas: H<sub>2</sub>O</p>
-
-<p><u>Underlined text</u> and <s>strikethrough text</s>.</p>`,
-        explanation: "Various HTML elements for formatting text with different semantic meanings.",
+        code: `<p>This text is <strong>bold</strong> and this is <em>italic</em>.</p>
+<p>You can <mark>highlight</mark> important words.</p>
+<p>Math: E = mc<sup>2</sup></p>
+<p>Chemistry: H<sub>2</sub>O</p>`,
+        explanation: "Basic text formatting elements for different purposes.",
         executable: true
       }
     ],
@@ -277,46 +267,36 @@ export const lessons: LessonContent[] = [
     ],
     examples: [
       {
-        title: "Different Types of Links",
-        code: `<!-- External link -->
-<a href="https://www.google.com" target="_blank" rel="noopener">Visit Google</a>
+        title: "Basic Links",
+        code: `<!-- Link to another website -->
+<a href="https://www.google.com">Visit Google</a>
 
-<!-- Internal link -->
+<!-- Link to another page -->
 <a href="about.html">About Us</a>
 
-<!-- Anchor link -->
-<a href="#section1">Go to Section 1</a>
+<!-- Link to email -->
+<a href="mailto:hello@example.com">Send Email</a>
 
-<!-- Email link -->
-<a href="mailto:contact@example.com">Send Email</a>
-
-<!-- Phone link -->
-<a href="tel:+1234567890">Call Us</a>
-
-<!-- Download link -->
-<a href="document.pdf" download>Download PDF</a>`,
-        explanation: "Various types of links for different purposes. Note the target and rel attributes for external links.",
+<!-- Link to phone -->
+<a href="tel:123-456-7890">Call Us</a>`,
+        explanation: "Different types of links you can create in HTML.",
         executable: true
       },
       {
-        title: "Navigation Menu",
+        title: "Simple Navigation",
         code: `<nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="home.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
 <h2 id="section1">Section 1</h2>
-<p>This is section 1 content.</p>
+<p>This is section 1.</p>
 
-<h2 id="section2">Section 2</h2>
-<p>This is section 2 content.</p>
-
-<a href="#section1">Back to Section 1</a>`,
-        explanation: "A semantic navigation structure using nav element and anchor links for page sections.",
+<a href="#section1">Go to Section 1</a>`,
+        explanation: "A simple navigation menu and anchor links to sections on the same page.",
         executable: true
       }
     ],
@@ -403,30 +383,25 @@ export const lessons: LessonContent[] = [
     ],
     examples: [
       {
-        title: "Basic Image Usage",
-        code: `<img src="landscape.jpg" alt="Beautiful mountain landscape at sunset" width="600" height="400">
+        title: "Basic Images",
+        code: `<img src="photo.jpg" alt="A beautiful sunset" width="400" height="300">
 
-<img src="logo.png" alt="Company Logo" width="200" height="100">
-
-<!-- Image with lazy loading -->
-<img src="large-photo.jpg" alt="Large photograph" loading="lazy">`,
-        explanation: "Basic image embedding with proper alt text and dimensions. The loading attribute helps with performance.",
+<img src="logo.png" alt="Company Logo" width="200" height="100">`,
+        explanation: "Basic image tags with alt text for accessibility.",
         executable: true
       },
       {
-        title: "Responsive Images",
-        code: `<!-- Using srcset for different screen densities -->
-<img src="photo-1x.jpg" 
-     srcset="photo-1x.jpg 1x, photo-2x.jpg 2x, photo-3x.jpg 3x" 
-     alt="Responsive photo">
+        title: "Images with Captions",
+        code: `<figure>
+    <img src="mountain.jpg" alt="Snow-capped mountain peak" width="400" height="300">
+    <figcaption>Beautiful mountain landscape</figcaption>
+</figure>
 
-<!-- Using picture element for art direction -->
-<picture>
-    <source media="(min-width: 800px)" srcset="large.jpg">
-    <source media="(min-width: 400px)" srcset="medium.jpg">
-    <img src="small.jpg" alt="Responsive image with art direction">
-</picture>`,
-        explanation: "Advanced responsive image techniques using srcset and picture elements for different screen sizes and resolutions.",
+<figure>
+    <img src="ocean.jpg" alt="Blue ocean waves" width="400" height="300">
+    <figcaption>Peaceful ocean view</figcaption>
+</figure>`,
+        explanation: "Using figure and figcaption for images with descriptions.",
         executable: true
       }
     ],
@@ -506,77 +481,52 @@ export const lessons: LessonContent[] = [
     ],
     examples: [
       {
-        title: "Different List Types",
-        code: `<!-- Unordered List -->
+        title: "Simple Lists",
+        code: `<!-- Bullet list -->
 <ul>
     <li>HTML</li>
     <li>CSS</li>
     <li>JavaScript</li>
 </ul>
 
-<!-- Ordered List -->
+<!-- Numbered list -->
 <ol>
-    <li>Plan your website</li>
-    <li>Create HTML structure</li>
-    <li>Add CSS styling</li>
-    <li>Implement JavaScript functionality</li>
-</ol>
-
-<!-- Description List -->
-<dl>
-    <dt>HTML</dt>
-    <dd>HyperText Markup Language - structures web content</dd>
-    
-    <dt>CSS</dt>
-    <dd>Cascading Style Sheets - styles web content</dd>
-    
-    <dt>JavaScript</dt>
-    <dd>Programming language for web interactivity</dd>
-</dl>`,
-        explanation: "Three types of lists: unordered for bullet points, ordered for numbered items, and description lists for term-definition pairs.",
+    <li>Learn HTML</li>
+    <li>Learn CSS</li>
+    <li>Learn JavaScript</li>
+</ol>`,
+        explanation: "Two basic types of lists: unordered (bullets) and ordered (numbers).",
         executable: true
       },
       {
-        title: "Accessible Data Table",
+        title: "Simple Table",
         code: `<table>
-    <caption>Web Development Course Schedule</caption>
     <thead>
         <tr>
-            <th scope="col">Week</th>
-            <th scope="col">Topic</th>
-            <th scope="col">Hours</th>
-            <th scope="col">Status</th>
+            <th>Language</th>
+            <th>Difficulty</th>
+            <th>Time to Learn</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>1</td>
-            <td>HTML Fundamentals</td>
-            <td>8</td>
-            <td>✅ Complete</td>
+            <td>HTML</td>
+            <td>Easy</td>
+            <td>1 week</td>
         </tr>
         <tr>
-            <td>2</td>
-            <td>CSS Styling</td>
-            <td>12</td>
-            <td>🔄 In Progress</td>
+            <td>CSS</td>
+            <td>Easy</td>
+            <td>2 weeks</td>
         </tr>
         <tr>
-            <td>3</td>
-            <td>JavaScript Basics</td>
-            <td>15</td>
-            <td>⏳ Upcoming</td>
+            <td>JavaScript</td>
+            <td>Medium</td>
+            <td>3 months</td>
         </tr>
     </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="2"><strong>Total Hours</strong></td>
-            <td><strong>35</strong></td>
-            <td></td>
-        </tr>
-    </tfoot>
 </table>`,
-        explanation: "A properly structured table with caption, headers, body, and footer. Uses scope attributes for accessibility.",
+        explanation: "A simple table with headers and data rows.",
         executable: true
       }
     ],
@@ -678,10 +628,10 @@ export const lessons: LessonContent[] = [
     ],
     examples: [
       {
-        title: "Contact Form",
-        code: `<form action="/submit" method="post">
+        title: "Simple Contact Form",
+        code: `<form>
     <div>
-        <label for="name">Full Name:</label>
+        <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
     </div>
     
@@ -691,13 +641,36 @@ export const lessons: LessonContent[] = [
     </div>
     
     <div>
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="3"></textarea>
+    </div>
+    
+    <button type="submit">Send</button>
+</form>`,
+        explanation: "A simple contact form with text input, email input, and textarea.",
+        executable: true
+      },
+      {
+        title: "Different Input Types",
+        code: `<form>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
     </div>
     
     <div>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+    </div>
+    
+    <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100">
+    </div>
+    
+    <div>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
     </div>
     
     <div>
@@ -705,59 +678,9 @@ export const lessons: LessonContent[] = [
         <label for="newsletter">Subscribe to newsletter</label>
     </div>
     
-    <button type="submit">Send Message</button>
-</form>`,
-        explanation: "A complete contact form with various input types, labels, and validation attributes.",
-        executable: true
-      },
-      {
-        title: "Advanced Form Controls",
-        code: `<form>
-    <fieldset>
-        <legend>Personal Information</legend>
-        
-        <div>
-            <label for="birthdate">Birth Date:</label>
-            <input type="date" id="birthdate" name="birthdate">
-        </div>
-        
-        <div>
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" min="18" max="100">
-        </div>
-        
-        <div>
-            <label for="experience">Experience Level:</label>
-            <input type="range" id="experience" name="experience" min="1" max="10" value="5">
-            <output for="experience">5</output>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend>Preferences</legend>
-        
-        <div>
-            <input type="radio" id="beginner" name="level" value="beginner">
-            <label for="beginner">Beginner</label>
-        </div>
-        <div>
-            <input type="radio" id="intermediate" name="level" value="intermediate">
-            <label for="intermediate">Intermediate</label>
-        </div>
-        <div>
-            <input type="radio" id="advanced" name="level" value="advanced">
-            <label for="advanced">Advanced</label>
-        </div>
-        
-        <div>
-            <label for="color">Favorite Color:</label>
-            <input type="color" id="color" name="color" value="#3b82f6">
-        </div>
-    </fieldset>
-    
     <button type="submit">Submit</button>
 </form>`,
-        explanation: "Advanced form with fieldsets, different input types, and proper grouping for better accessibility.",
+        explanation: "Different input types for various kinds of data.",
         executable: true
       }
     ],
@@ -869,102 +792,54 @@ export const lessons: LessonContent[] = [
     ],
     examples: [
       {
-        title: "Semantic Page Structure",
-        code: `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Article</title>
-</head>
-<body>
-    <header>
-        <h1>My Tech Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <article>
-            <header>
-                <h2>Understanding HTML5 Semantics</h2>
-                <p>Published on <time datetime="2024-01-15">January 15, 2024</time></p>
-            </header>
-            
-            <section>
-                <h3>Introduction</h3>
-                <p>Semantic HTML is crucial for modern web development...</p>
-            </section>
-            
-            <section>
-                <h3>Benefits</h3>
-                <p>Using semantic elements provides many advantages...</p>
-            </section>
-        </article>
-        
-        <aside>
-            <h3>Related Articles</h3>
-            <ul>
-                <li><a href="/css-guide">CSS Best Practices</a></li>
-                <li><a href="/js-tips">JavaScript Tips</a></li>
-            </ul>
-        </aside>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 My Tech Blog. All rights reserved.</p>
-    </footer>
-</body>
-</html>`,
-        explanation: "A complete semantic HTML page structure using HTML5 elements for better accessibility and SEO.",
+        title: "Simple Semantic Page",
+        code: `<header>
+    <h1>My Website</h1>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <h2>My Blog Post</h2>
+        <p>This is my first blog post about HTML.</p>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2024 My Website</p>
+</footer>`,
+        explanation: "A simple page structure using semantic HTML5 elements.",
         executable: true
       },
       {
-        title: "Article with Figure",
+        title: "Article with Sections",
         code: `<article>
     <header>
-        <h2>Web Development Trends 2024</h2>
-        <p>By <strong>Jane Developer</strong> on <time datetime="2024-01-20">January 20, 2024</time></p>
+        <h2>Learning HTML</h2>
+        <p>Published on January 20, 2024</p>
     </header>
     
     <section>
-        <h3>The Rise of Semantic Web</h3>
-        <p>Semantic web technologies are becoming increasingly important...</p>
-        
-        <figure>
-            <img src="semantic-web-chart.jpg" alt="Chart showing growth of semantic web adoption">
-            <figcaption>
-                <strong>Figure 1:</strong> Semantic web adoption has grown 300% in the last year
-            </figcaption>
-        </figure>
-        
-        <p>This trend shows no signs of slowing down...</p>
+        <h3>What is HTML?</h3>
+        <p>HTML is the language used to create websites.</p>
     </section>
     
     <section>
-        <h3>Best Practices</h3>
-        <p>To leverage semantic HTML effectively:</p>
-        <ol>
-            <li>Use appropriate semantic elements</li>
-            <li>Maintain proper heading hierarchy</li>
-            <li>Include meaningful alt text</li>
-            <li>Use ARIA labels when needed</li>
-        </ol>
+        <h3>Why Learn HTML?</h3>
+        <p>HTML is the foundation of all websites.</p>
     </section>
     
     <footer>
-        <p>
-            <small>This article was last updated on 
-            <time datetime="2024-01-22">January 22, 2024</time></small>
-        </p>
+        <p>Tags: HTML, Beginner</p>
     </footer>
 </article>`,
-        explanation: "An article with proper semantic structure, including figure/figcaption and time elements.",
+        explanation: "An article with proper semantic structure and sections.",
         executable: true
       }
     ],
@@ -1102,98 +977,52 @@ export const lessons: LessonContent[] = [
     ],
     examples: [
       {
-        title: "Multimedia Elements",
-        code: `<!-- Video Element -->
-<video controls width="600" height="400">
+        title: "Simple Multimedia",
+        code: `<!-- Video -->
+<video controls width="400" height="300">
     <source src="video.mp4" type="video/mp4">
-    <source src="video.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. 
-    <a href="video.mp4">Download the video</a> instead.</p>
+    <p>Your browser doesn't support video.</p>
 </video>
 
-<!-- Audio Element -->
+<!-- Audio -->
 <audio controls>
     <source src="audio.mp3" type="audio/mpeg">
-    <source src="audio.ogg" type="audio/ogg">
-    <p>Your browser doesn't support HTML5 audio.</p>
+    <p>Your browser doesn't support audio.</p>
 </audio>
 
-<!-- Canvas for Graphics -->
-<canvas id="myCanvas" width="400" height="200">
-    Your browser doesn't support the canvas element.
-</canvas>
-
-<!-- Inline SVG -->
-<svg width="200" height="100">
+<!-- Simple SVG -->
+<svg width="100" height="100">
     <circle cx="50" cy="50" r="40" fill="blue" />
-    <rect x="100" y="10" width="80" height="80" fill="red" />
 </svg>`,
-        explanation: "HTML5 multimedia elements with fallbacks for older browsers and accessibility considerations.",
+        explanation: "Basic multimedia elements: video, audio, and simple SVG graphics.",
         executable: true
       },
       {
-        title: "Advanced Form Validation",
-        code: `<form novalidate>
+        title: "Simple Form Validation",
+        code: `<form>
     <div>
-        <label for="website">Website URL:</label>
-        <input type="url" id="website" name="website" 
-               pattern="https?://.+" 
-               placeholder="https://example.com"
-               required>
-        <span class="error" id="website-error"></span>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
     </div>
     
     <div>
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" 
-               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-               placeholder="123-456-7890"
-               title="Format: 123-456-7890">
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
     </div>
     
     <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" 
-               minlength="8" 
-               pattern="(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-               title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters"
-               required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
     </div>
     
     <div>
-        <label for="confirm-password">Confirm Password:</label>
-        <input type="password" id="confirm-password" name="confirm-password" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100">
     </div>
     
-    <div>
-        <label for="birthdate">Birth Date:</label>
-        <input type="date" id="birthdate" name="birthdate" 
-               min="1900-01-01" max="2010-12-31" required>
-    </div>
-    
-    <div>
-        <label for="file">Upload Resume (PDF only):</label>
-        <input type="file" id="file" name="file" 
-               accept=".pdf" required>
-    </div>
-    
-    <button type="submit">Submit Form</button>
-</form>
-
-<script>
-// Custom validation example
-document.getElementById('confirm-password').addEventListener('input', function() {
-    const password = document.getElementById('password').value;
-    const confirm = this.value;
-    
-    if (password !== confirm) {
-        this.setCustomValidity('Passwords do not match');
-    } else {
-        this.setCustomValidity('');
-    }
-});
-</script>`,
-        explanation: "Advanced form with custom validation patterns, file uploads, and JavaScript validation API.",
+    <button type="submit">Submit</button>
+</form>`,
+        explanation: "Form with built-in HTML5 validation using input types and attributes.",
         executable: true
       }
     ],
