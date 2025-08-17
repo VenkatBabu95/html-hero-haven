@@ -43,9 +43,9 @@
     --success-foreground: 255 255 255;
     --success-light: 142 76% 95%;
 
-    --warning: 38 92% 50%; /* amber-500 */
-    --warning-foreground: 255 255 255;
-    --warning-light: 38 92% 95%;
+    --warning: 210 20% 98%; /* off white */
+    --warning-foreground: 71 84% 47%; /* darker text for contrast */
+    --warning-light: 210 20% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 255 255 255;
