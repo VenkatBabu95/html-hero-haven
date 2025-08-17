@@ -61,9 +61,7 @@ export default {
 					foreground: 'hsl(var(--code-foreground))',
 					keyword: 'hsl(var(--code-keyword))',
 					string: 'hsl(var(--code-string))',
-					comment: 'hsl(var(--code-comment))',
-					tag: 'hsl(var(--code-tag))',
-					attribute: 'hsl(var(--code-attribute))'
+					comment: 'hsl(var(--code-comment))'
 				},
 				success: {
 					DEFAULT: 'hsl(var(--success))',
