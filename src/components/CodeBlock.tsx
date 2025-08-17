@@ -49,11 +49,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
   };
 
   const highlightHTML = (htmlCode: string) => {
-    return htmlCode
-      .replace(/(&lt;\/?)(\w+)([^&]*&gt;)/g, 
-        '<span class="text-code-keyword">$1$2$3</span>')
-      .replace(/(&lt;!--.*?--&gt;)/g, '<span class="text-code-comment">$1</span>')
-      .replace(/"([^"]*)"/g, '<span class="text-code-string">"$1"</span>');
+    return htmlCode; // No syntax highlighting for cleaner code display
   };
 
   const escapeHtml = (unsafe: string) => {

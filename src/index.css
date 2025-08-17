@@ -22,18 +22,15 @@
     --primary-hover: 262 83% 53%;
     --primary-light: 262 100% 97%;
 
-    /* Secondary - Vibrant Orange */
-    --secondary: 25 95% 53%; /* orange-500 */
+    /* Secondary - Royal Blue */
+    --secondary: 221 83% 53%; /* royal blue */
     --secondary-foreground: 255 255 255;
-    --secondary-hover: 25 95% 48%;
-    --secondary-light: 25 100% 96%;
+    --secondary-hover: 221 83% 48%;
+    --secondary-light: 221 100% 96%;
 
     /* Code & Syntax Colors */
     --code-bg: 220 13% 18%; /* dark slate */
     --code-foreground: 210 40% 98%; /* light gray */
-    --code-keyword: 262 83% 75%; /* purple-300 */
-    --code-string: 25 95% 68%; /* orange-300 */
-    --code-comment: 215 16% 57%; /* gray-500 */
 
     /* Educational UI */
     --muted: 241 10% 96%; /* slate-100 */

@@ -58,10 +58,7 @@ export default {
 				},
 				code: {
 					bg: 'hsl(var(--code-bg))',
-					foreground: 'hsl(var(--code-foreground))',
-					keyword: 'hsl(var(--code-keyword))',
-					string: 'hsl(var(--code-string))',
-					comment: 'hsl(var(--code-comment))'
+					foreground: 'hsl(var(--code-foreground))'
 				},
 				success: {
 					DEFAULT: 'hsl(var(--success))',
