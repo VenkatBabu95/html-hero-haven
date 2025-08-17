@@ -87,8 +87,8 @@ const Index = () => {
         {/* Stats Section */}
         <div className="container mx-auto px-6 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            <Card className="p-6 text-center bg-card shadow-soft border-border">
-              <div className="text-3xl font-bold text-primary mb-2">{stats.total}</div>
+            <Card className="p-6 text-center bg-secondary/20 shadow-soft border-secondary/30">
+              <div className="text-3xl font-bold text-secondary mb-2">{stats.total}</div>
               <div className="text-muted-foreground">Total Lessons</div>
             </Card>
             <Card className="p-6 text-center bg-card shadow-soft border-border">
@@ -123,7 +123,7 @@ const Index = () => {
                   onClick={() => handleLessonSelect(lesson.id)}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold text-lg">
+                    <div className="flex-shrink-0 w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center text-secondary font-bold text-lg border border-secondary/30">
                       {index + 1}
                     </div>
                     <div className="flex-1">
@@ -149,7 +149,7 @@ const Index = () => {
                         <Button 
                           variant="outline" 
                           size="sm"
-                          className="hover:bg-primary hover:text-primary-foreground"
+                          className="hover:bg-secondary hover:text-secondary-foreground border-secondary/30"
                         >
                           {lesson.completed ? 'Review' : 'Start Lesson'}
                           <ArrowRight className="ml-2 h-4 w-4" />

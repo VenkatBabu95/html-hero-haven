@@ -61,7 +61,7 @@ const Navigation: React.FC<NavigationProps> = ({ lessons, currentLesson, onLesso
             onClick={() => onLessonSelect(lesson.id)}
             className={`w-full text-left p-4 rounded-lg border transition-all duration-200 hover:shadow-soft ${
               currentLesson === lesson.id
-                ? 'bg-primary-light border-primary text-primary'
+                ? 'bg-secondary border-secondary text-secondary-foreground'
                 : 'bg-card hover:bg-accent border-border text-foreground'
             }`}
           >
